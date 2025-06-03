@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0072b1;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <g>
+    <g id="meteor-icon-kit__solid-linkedin">
+      <path class="cls-1" d="M29.7,0H2.3C1,0,0,1,0,2.3v27.4C0,31,1,32,2.3,32h27.4c1.3,0,2.3-1,2.3-2.3V2.3C32,1,31,0,29.7,0ZM9.7,27.4h-4.7v-15.3h4.8v15.3h0ZM7.3,10.1c-1.5,0-2.8-1.2-2.8-2.8s1.2-2.7,2.8-2.7,2.8,1.2,2.8,2.7-1.2,2.8-2.8,2.8ZM27.4,27.4h-4.7v-7.4c0-1.8,0-4.1-2.5-4.1s-2.9,1.9-2.9,3.9v7.6h-4.7v-15.3h4.5v2.1h0c.6-1.2,2.2-2.5,4.5-2.5,4.8,0,5.7,3.2,5.7,7.3v8.4Z"/>
+    </g>
+  </g>
+</svg>
