@@ -751,6 +751,10 @@
         message: formData.get("message"),
       };
 
+      const button = contactForm.querySelector('.send-sms-button');
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
       try {
         const res = await fetch("https://sms-contact-form-7499.twil.io/receive-sms", {
           method: "POST",
@@ -770,8 +774,12 @@
       } catch (err) {
         console.error(err);
         statusEl.textContent = "Network error. Please try again later.";
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Send SMS →';
       }
     });
+
    
 
 
