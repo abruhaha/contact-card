@@ -725,13 +725,19 @@
       }
     }
 
+     // Toggle Let's Connect button
+    function toggleForm() {
+      const form = document.getElementById("contactForm");
+      form.classList.toggle("visible");
+    }
+
     // SMS Form Back end
     const ctaButton = document.getElementById("cta-button");
     const formWrapper = document.getElementById("contactForm");
     const contactForm = document.getElementById("contact-form");
     const statusEl = document.getElementById("form-status");
 
-    // Handle form submission
+    // Handle form submission - Front End - URL = Twilio function
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -739,6 +745,7 @@
       const payload = {
         name: formData.get("name"),
         phone: formData.get("phone"),
+        email: formData.get("email"),
         organization: formData.get("organization"),
         message: formData.get("message"),
       };
@@ -764,11 +771,7 @@
         statusEl.textContent = "Network error. Please try again later.";
       }
     });
-    // Toggle Let's Connect button
-    function toggleForm() {
-      const form = document.getElementById("contactForm");
-      form.classList.toggle("visible");
-    }
+   
 
 
   </script>
