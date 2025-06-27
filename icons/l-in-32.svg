@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 511.9 511.9">
   <defs>
     <style>
       .cls-1 {
-        fill: #0072b1;
         fill-rule: evenodd;
       }
     </style>
   </defs>
-  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <!-- Generator: Adobe Illustrator 28.7.8, SVG Export Plug-In . SVG Version: 1.2.0 Build 200)  -->
   <g>
-    <g id="meteor-icon-kit__solid-linkedin">
-      <path class="cls-1" d="M29.7,0H2.3C1,0,0,1,0,2.3v27.4C0,31,1,32,2.3,32h27.4c1.3,0,2.3-1,2.3-2.3V2.3C32,1,31,0,29.7,0ZM9.7,27.4h-4.7v-15.3h4.8v15.3h0ZM7.3,10.1c-1.5,0-2.8-1.2-2.8-2.8s1.2-2.7,2.8-2.7,2.8,1.2,2.8,2.7-1.2,2.8-2.8,2.8ZM27.4,27.4h-4.7v-7.4c0-1.8,0-4.1-2.5-4.1s-2.9,1.9-2.9,3.9v7.6h-4.7v-15.3h4.5v2.1h0c.6-1.2,2.2-2.5,4.5-2.5,4.8,0,5.7,3.2,5.7,7.3v8.4Z"/>
+    <g id="Layer_1">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <g id="meteor-icon-kit__solid-linkedin">
+          <path class="cls-1" d="M475.1,0H36.8C16,0,0,16,0,36.8v438.3c0,20.8,16,36.8,36.8,36.8h438.3c20.8,0,36.8-16,36.8-36.8V36.8C511.9,16,495.9,0,475.1,0ZM155.2,438.3h-75.2v-244.8h76.8v244.8h-1.6ZM116.8,161.6c-24,0-44.8-19.2-44.8-44.8s19.2-43.2,44.8-43.2,44.8,19.2,44.8,43.2-19.2,44.8-44.8,44.8ZM438.3,438.3h-75.2v-118.4c0-28.8,0-65.6-40-65.6s-46.4,30.4-46.4,62.4v121.6h-75.2v-244.8h72v33.6h0c9.6-19.2,35.2-40,72-40,76.8,0,91.2,51.2,91.2,116.8v134.4h1.6Z"/>
+        </g>
+      </g>
     </g>
   </g>
 </svg>
