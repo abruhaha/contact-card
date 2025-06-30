@@ -362,7 +362,7 @@
     html[data-theme='dark'] .connect-button {
       box-shadow: 0 4px 12px rgba(102, 102, 102, 0.6); /* #666666 = rgb(102,102,102) */
     }
-    
+
     html[data-theme='dark'] .connect-button,
     html[data-theme='dark'] .connect-button span,
     html[data-theme='dark'] .connect-button .cta-text  {
@@ -790,36 +790,41 @@
       const thisSection = document.getElementById(id);
       const isActive = thisSection.style.display === 'block';
 
-      // Close all sections and deactivate all buttons
-      const allSections = document.querySelectorAll('.container');
-      const allButtons = document.querySelectorAll('.icon-row .toggle');
-      allSections.forEach(section => section.style.display = 'none');
-      allButtons.forEach(btn => btn.classList.remove('active'));
+      if (isActive) {
+        // If this section is open, close it and remove active state
+        thisSection.style.display = 'none';
+        button.classList.remove('active');
+      } else {
+        // Close all sections and deactivate all buttons
+        const allSections = document.querySelectorAll('.container');
+        const allButtons = document.querySelectorAll('.icon-row .toggle');
+        allSections.forEach(section => section.style.display = 'none');
+        allButtons.forEach(btn => btn.classList.remove('active'));
 
-      if (!isActive) {
-        // Only open if it was closed
+        // Open this one
         thisSection.style.display = 'block';
         button.classList.add('active');
       }
     }
 
 
+
     // Toggle Chevrons
     function toggleInlineSection(button, sectionId) {
       const content = document.getElementById(sectionId);
-      const isActive = content.classList.contains('active');
       const chevronIcon = button.querySelector('.chevron-icon');
 
-      // Close all sections and chevrons first
-      document.querySelectorAll('.inline-section').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.chevron-toggle .chevron-icon').forEach(icon => icon.classList.remove('rotate'));
-
-      if (!isActive) {
-        // Open this one
+      if (content.classList.contains('active')) {
+        // It's open → close it
+        content.classList.remove('active');
+        if (chevronIcon) chevronIcon.classList.remove('rotate');
+      } else {
+        // It's closed → open it
         content.classList.add('active');
         if (chevronIcon) chevronIcon.classList.add('rotate');
       }
     }
+
 
 
 
