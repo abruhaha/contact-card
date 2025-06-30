@@ -788,24 +788,22 @@
 
     // Toggle svg icons
     function toggleSection(id, button) {
-      const thisSection = document.getElementById(id);
-      const isActive = thisSection.style.display === 'block';
-
-      // Close all sections and deactivate all buttons
+      const section = document.getElementById(id);
       const allSections = document.querySelectorAll('.container');
       const allButtons = document.querySelectorAll('.icon-row .toggle');
-      allSections.forEach(section => section.style.display = 'none');
+
+      const isActive = section.style.display === 'block';
+
+      // Close all
+      allSections.forEach(sec => sec.style.display = 'none');
       allButtons.forEach(btn => btn.classList.remove('active'));
 
       if (!isActive) {
-        // Only open if it was closed
-        thisSection.style.display = 'block';
+        section.style.display = 'block';
         button.classList.add('active');
-      } else {
-        // Explicitly remove active from *button* on closing
-        button.classList.remove('active');
       }
     }
+
 
     // Toggle Chevrons
     function toggleInlineSection(button, sectionId) {
