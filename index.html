@@ -755,6 +755,7 @@
               <div class="form-row">
                 <input type="email" name="email" placeholder="Your Email" autocomplete="email" required>
                 <input type="text" name="organization" placeholder="Organization (optional)" autocomplete="organization">
+                <input type="text" name="website" id="website" style="display:none">
               </div>
               <div class="form-row full-width">
                 <textarea name="message" placeholder="Your Message" rows="5" autocomplete="off"></textarea>
@@ -790,24 +791,21 @@
       const thisSection = document.getElementById(id);
       const isActive = thisSection.style.display === 'block';
 
-      if (isActive) {
-        // If this section is open, close it and remove active state
-        thisSection.style.display = 'none';
-        button.classList.remove('active');
-      } else {
-        // Close all sections and deactivate all buttons
-        const allSections = document.querySelectorAll('.container');
-        const allButtons = document.querySelectorAll('.icon-row .toggle');
-        allSections.forEach(section => section.style.display = 'none');
-        allButtons.forEach(btn => btn.classList.remove('active'));
+      // Close all sections and deactivate all buttons
+      const allSections = document.querySelectorAll('.container');
+      const allButtons = document.querySelectorAll('.icon-row .toggle');
+      allSections.forEach(section => section.style.display = 'none');
+      allButtons.forEach(btn => btn.classList.remove('active'));
 
-        // Open this one
+      if (!isActive) {
+        // Only open if it was closed
         thisSection.style.display = 'block';
         button.classList.add('active');
+      } else {
+        // Explicitly remove active from *button* on closing
+        button.classList.remove('active');
       }
     }
-
-
 
     // Toggle Chevrons
     function toggleInlineSection(button, sectionId) {
@@ -825,16 +823,13 @@
       }
     }
 
-
-
-
      // Toggle Let's Connect button
     function toggleForm() {
       const form = document.getElementById("contactForm");
       form.classList.toggle("visible");
     }
 
-    // SMS Form Back end
+    // Send Message Form Back end
     const ctaButton = document.getElementById("cta-button");
     const formWrapper = document.getElementById("contactForm");
     const contactForm = document.getElementById("contact-form");
@@ -851,6 +846,7 @@
         email: formData.get("email"),
         organization: formData.get("organization"),
         message: formData.get("message"),
+        website: formData.get("website"),
       };
 
       const button = contactForm.querySelector('.send-sms-button');
