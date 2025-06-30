@@ -66,7 +66,7 @@
       /*filter: brightness(1.4) drop-shadow(0 0 6px #53b0d7);*/
     }
     .sub-bold.active {
-      filter: brightness(1.4) drop-shadow(0 0 6px #53b0d7);
+      filter: brightness(1.4) drop-shadow(0 0 6px /*#53b0d7*/#988350);
     }
 
     .card {
@@ -132,7 +132,7 @@
 
     .chevron-toggle .chevron-icon.rotate {
       transform: rotate(180deg) scale(1.15); /* Preserve hover scale */
-      filter: brightness(2) invert(1) drop-shadow(0 0 6px #53b0d7); /* Preserve hover glow */
+      filter: brightness(2) invert(1) drop-shadow(0 0 6px /*#53b0d7*/#988350); /* Preserve hover glow */
       transition: background 0.3s, color 0.3s;
       /*filter: brightness(1.4) drop-shadow(0 0 6px #53b0d7);*/
     }
@@ -522,7 +522,6 @@
       transition: transform 0.3s ease;
     }
 
-
     .contact-form-container {
       display: none;
       transition: all 0.3s ease;
@@ -549,6 +548,17 @@
       -webkit-text-fill-color: #121212 !important;
     }
       */
+      .icon-row button,
+.icon-row .toggle,
+.chevron-toggle {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon-row .toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
     button, a, span {
       -webkit-text-fill-color: inherit;
     }
@@ -788,22 +798,23 @@
 
     // Toggle svg icons
     function toggleSection(id, button) {
-      const section = document.getElementById(id);
+      const thisSection = document.getElementById(id);
+      const isActive = thisSection.style.display === 'block';
+
+      // Close all sections and deactivate all buttons
       const allSections = document.querySelectorAll('.container');
       const allButtons = document.querySelectorAll('.icon-row .toggle');
-
-      const isActive = section.style.display === 'block';
-
-      // Close all
-      allSections.forEach(sec => sec.style.display = 'none');
+      allSections.forEach(section => section.style.display = 'none');
       allButtons.forEach(btn => btn.classList.remove('active'));
 
       if (!isActive) {
-        section.style.display = 'block';
+        thisSection.style.display = 'block';
         button.classList.add('active');
       }
-    }
 
+      // Remove focus highlight
+      if (button) button.blur();
+    }
 
     // Toggle Chevrons
     function toggleInlineSection(button, sectionId) {
