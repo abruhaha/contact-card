@@ -79,8 +79,7 @@
       background-color: inherit;
     }
 
-    .theme-toggle,
-    .chevron-toggle {
+    .theme-toggle {
       top: 1rem;
       right: 1rem;
       background: none;
@@ -89,6 +88,15 @@
       display: flex;
       align-items: center;
       position: absolute;
+    }
+
+    .chevron-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
   
     .inline-section {
@@ -226,7 +234,7 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-5px); }
       to { opacity: 1; transform: translateY(0); }
-    }
+    }/*
     .chevron-list {
       display: flex;
       flex-direction: column;
@@ -243,12 +251,57 @@
       width: 100%;
       justify-content: flex-start;
     }
+*/
+    .chevron-list .chevron-toggle {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      background-color: inherit;
+      border: 1px solid #988350;
+    }
+    .chevron-list .chevron-toggle:hover {
+      background-color: rgba(152, 131, 80, 0.1);
+    }
+    .chevron-item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .chevron-item + .chevron-item {
+      margin-top: 1.5rem;
+    }
+
+    .chevron-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chevron-item {
+  display: flex;
+  flex-direction: column;
+}
+.icon-row img,
+.icon-row .toggle:hover img,
+.icon-row .toggle-active,
+.chevron-toggle img,
+.chevron-toggle:hover img,
+.chevron-toggle.active img {
+  border: none;
+}
+
+
+/*
 
     .chevron-toggle:hover img {
       transform: scale(1.15);
       filter: brightness(1.4) drop-shadow(0 0 6px #53b0d7);
     }
-
+*/
     .chevron-toggle img {
       width: 24px;
       height: 24px;
@@ -469,6 +522,27 @@
     .contact-form-container.visible {
       display: block;
     }
+/* wrong but mobile specific
+    .connect-button, 
+    .connect-button span {
+      color: #f0f0f0 !important;
+      -webkit-text-fill-color: #f0f0f0 !important;
+    }
+    html[data-theme='dark'] .connect-button, 
+    html[data-theme='dark'] .connect-button span {
+      color: #f0f0f0 !important;
+      -webkit-text-fill-color: #f0f0f0 !important;
+    }
+
+    html[data-theme='light'] .connect-button, 
+    html[data-theme='light'] .connect-button span {
+      color: #121212 !important;
+      -webkit-text-fill-color: #121212 !important;
+    }
+      */
+    button, a, span {
+      -webkit-text-fill-color: inherit;
+    }
 
 
   </style>
@@ -571,9 +645,9 @@
           <div class="container" id="careerObjectives">
             <h2>Career Objectives:</h2>
             <ul>
-              <li><span class="sub-bold">Lean Transformation:</span> To coach and lead Lean-Agile transformations where communities embrace a culture of self-organization, continuous learning, and innovation—delivering sustainable value at scale.</li>
-              <li><span class="sub-bold">Team Development & Servant Leadership:</span> To empower cross-functional teams through servant leadership, mentorship, and Agile coaching—enabling high performance, resilience, and customer-centered value delivery.</li>
-              <li><span class="sub-bold">Strategic Organizational Growth:</span> To partner with organizations to align delivery with strategic goals, drive measurable outcomes through adaptive frameworks, and strengthen stakeholder engagement through metrics-informed coaching.</li>
+              <li><span class="sub-bold">Lean Transformation:</span> <p>To coach and lead Lean-Agile transformations where communities embrace a culture of self-organization, continuous learning, and innovation—delivering sustainable value at scale.</p></li>
+              <li><span class="sub-bold">Team Development & Servant Leadership:</span> <p>To empower cross-functional teams through servant leadership, mentorship, and Agile coaching—enabling high performance, resilience, and customer-centered value delivery.</p></li>
+              <li><span class="sub-bold">Strategic Organizational Growth:</span> <p>To partner with organizations to align delivery with strategic goals, drive measurable outcomes through adaptive frameworks, and strengthen stakeholder engagement through metrics-informed coaching.</p></li>
             </ul>
           </div>
 
@@ -581,11 +655,11 @@
             <div class="container" id="values">
               <h2>Values:</h2>
               <ul>
-                <li><span class="sub-bold">People:</span> I believe people are the greatest source of value in any organization. As a servant leader, I am committed to empowering others, recognizing their contributions, and helping them thrive personally and professionally.</li>
-                <li><span class="sub-bold">Integrity:</span> Integrity is reflected in our habits and decisions—both seen and unseen. I lead by example, doing what’s right with consistency and accountability, building a foundation of trust that drives lasting change.</li>
-                <li><span class="sub-bold">Continuous Growth:</span> Growth is not accidental—it requires reflection, feedback, challenge, and strategy. I create and support environments that prioritize learning and continuous improvement at every level.</li>
-                <li><span class="sub-bold">Transparency:</span> Clear communication and honest intent are essential to building trust. I lead with transparency to enable open dialogue, shared understanding, and aligned action.</li>
-                <li><span class="sub-bold">Community:</span> True leadership supports a cause greater than oneself. I believe in building purpose-driven communities where people collaborate, grow together, and contribute to meaningful impact.</li>
+                <li><span class="sub-bold">People:</span> <p>I believe people are the greatest source of value in any organization. As a servant leader, I am committed to empowering others, recognizing their contributions, and helping them thrive personally and professionally.</p></li>
+                <li><span class="sub-bold">Integrity:</span> <p>Integrity is reflected in our habits and decisions—both seen and unseen. I lead by example, doing what’s right with consistency and accountability, building a foundation of trust that drives lasting change.</p></li>
+                <li><span class="sub-bold">Continuous Growth:</span> <p>Growth is not accidental—it requires reflection, feedback, challenge, and strategy. I create and support environments that prioritize learning and continuous improvement at every level.</p></li>
+                <li><span class="sub-bold">Transparency:</span> <p>Clear communication and honest intent are essential to building trust. I lead with transparency to enable open dialogue, shared understanding, and aligned action.</p></li>
+                <li><span class="sub-bold">Community:</span> <p>True leadership supports a cause greater than oneself. I believe in building purpose-driven communities where people collaborate, grow together, and contribute to meaningful impact.</p></li>
               </ul>
             </div>
 
@@ -593,12 +667,12 @@
             <div class="container" id="provenImpact">
               <h2>Proven Impact:</h2>
               <ul>
-                <li><span class="sub-bold">Improved delivery predictability</span> by over 50% across two Program Increments by aligning features to customer needs, reducing lead time, and enhancing team communication.</li>
-                <li><span class="sub-bold">Supported Agile transformation efforts</span> for a multi-team program, increasing delivery reliability by 40% and fostering consistent planning and execution across teams.</li>
-                <li><span class="sub-bold">Coached cross-functional teams to self-organize</span>, resulting in a 25% reduction in cycle time and a measurable boost in team engagement and ownership.</li>
-                <li><span class="sub-bold">Managed, organized, and facilitated Community of Practice</span>, fostering continuous learning, peer coaching, and cross-departmental agile maturity.</li>
-                <li><span class="sub-bold">Influenced leadership, teams, and stakeholders at all levels</span>—upward, downward, and laterally—to promote organizational alignment and shared vision.</li>
-                <li><span class="sub-bold">Designed systems-thinking processes</span> and built internal applications that saved over $100K annually by reducing manual work, enabling traceability, and improving resource allocation.</li>
+                <li>Improved delivery predictability by over 50% across two Program Increments by aligning features to customer needs, reducing lead time, and enhancing team communication.</li>
+                <li>Supported Agile transformation efforts for a multi-team program, increasing delivery reliability by 40% and fostering consistent planning and execution across teams.</li>
+                <li>Coached cross-functional teams to self-organize, resulting in a 25% reduction in cycle time and a measurable boost in team engagement and ownership.</li>
+                <li>Managed, organized, and facilitated Community of Practice, fostering continuous learning, peer coaching, and cross-departmental agile maturity.</li>
+                <li>Influenced leadership, teams, and stakeholders at all levels—upward, downward, and laterally—to promote organizational alignment and shared vision.</li>
+                <li>Designed systems-thinking processes and built internal applications that saved over $100K annually by reducing manual work, enabling traceability, and improving resource allocation.</li>
               </ul>
             </div>
 
@@ -614,37 +688,44 @@
             <div class="container" id="agileExperiance">
               <h2>Agile Experiance</h2>
               <p>Agile isn't just for software development—I've seen it thrive in operations, marketing, manufacturing, print-production, and large-scale service delivery.</p>
-              <p class="sub-p">Click the chevrons below to explore my first-hand experience successfully leveraging Agile across multiple industries.</p>
+              <p class="sub-p">Click below to explore my first-hand experience successfully leveraging Agile across multiple industries.</p>
+            
+              <div class="chevron-list">
 
-              <div class="chevron-list"> 
-                  <button class="chevron-toggle" onclick="toggleInlineSection(this, 'nonSoftware')" title="Show/Hide Agile in non-Software Environments">
-                    <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Non-Software">
-                    <span class="sub-bold">Agile in Non-Software Environments</span>
-                  </button>
+                <div class="chevron-item"> 
+                    <button class="chevron-toggle" onclick="toggleInlineSection(this, 'nonSoftware')" title="Show/Hide Agile in non-Software Environments">
+                      <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Non-Software">
+                      <span class="sub-bold">Agile in Non-Software Environments</span>
+                    </button>
                     <div class="inline-section" id="nonSoftware">
-                      <p>While working as an Agency Project Manager for an international marketing agency, I supported one of the world’s top five quick-service restaurants (QSRs)—a company that has embedded Agile across its entire organization, from executive leadership to front-line restaurant deployment. We co-developed Agile practices tailored to production, software, and business operations, traveling between Pittsburgh and Atlanta to build a value-centered partnership that’s still growing today.</p>
-                      <p>I led Agile projects that aligned with the QSR’s broader Agile business model, managing both production and software development efforts. We scaled systems across 2,000+ locations, integrating data from over 500 data points per site, and executing updates four or more times a year. These initiatives supported multimillion-dollar accounts—driving measurable gains in efficiency, reducing human error, and building long-term trust.</p>
-                      <p>This experience solidified my belief that Agile—when applied with intention, empathy, and systems thinking—can scale far beyond product teams to transform entire businesses.</p>
+                        <p>While working as an Agency Project Manager for an international marketing agency, I supported one of the world’s top five quick-service restaurants (QSRs)—a company that has embedded Agile across its entire organization, from executive leadership to front-line restaurant deployment. We co-developed Agile practices tailored to production, software, and business operations, traveling between Pittsburgh and Atlanta to build a value-centered partnership that’s still growing today.</p>
+                        <p>I led Agile projects that aligned with the QSR’s broader Agile business model, managing both production and software development efforts. We scaled systems across 2,000+ locations, integrating data from over 500 data points per site, and executing updates four or more times a year. These initiatives supported multimillion-dollar accounts—driving measurable gains in efficiency, reducing human error, and building long-term trust.</p>
+                        <p>This experience solidified my belief that Agile—when applied with intention, empathy, and systems thinking—can scale far beyond product teams to transform entire businesses.</p>
                     </div>
+                </div>
 
+                <div class="chevron-item">
                   <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareMarketing')" title="Show/Hide Agile in Software Development Marketing">
                     <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Marketing Software Development">
                     <span class="sub-bold">Agile Software Development in Marketing</span>
                   </button>
-                    <div class="inline-section" id="softwareMarketing">
-                      <p>I began working in Agile environments at an international marketing agency supporting one of the fastest-growing and most successful QSR brands in the U.S.—a client that embedded Agile across every level of its organization. As our agency embraced their culture of continuous improvement, I focused on value delivery, lean practices, and innovation to strengthen the relationship, reduce internal costs, and streamline vendor coordination.</p> 
-                      <p>I facilitated systems-thinking initiatives and launched internal tools for our global organization, while coaching and training teams upward, downward, and laterally. Over time, I became a lead solution consultant for the client’s initiatives, supporting Agile software development that scaled across thousands of locations. My focus on trust-building, growth, and delivery not only contributed to the client’s sustained success—it also shaped my identity as an adaptive, value-driven leader.</p> 
-                    </div>
+                  <div class="inline-section" id="softwareMarketing">
+                    <p>I began working in Agile environments at an international marketing agency supporting one of the fastest-growing and most successful QSR brands in the U.S.—a client that embedded Agile across every level of its organization. As our agency embraced their culture of continuous improvement, I focused on value delivery, lean practices, and innovation to strengthen the relationship, reduce internal costs, and streamline vendor coordination.</p> 
+                    <p>I facilitated systems-thinking initiatives and launched internal tools for our global organization, while coaching and training teams upward, downward, and laterally. Over time, I became a lead solution consultant for the client’s initiatives, supporting Agile software development that scaled across thousands of locations. My focus on trust-building, growth, and delivery not only contributed to the client’s sustained success—it also shaped my identity as an adaptive, value-driven leader.</p> 
+                  </div>
+                </div>
 
+                <div class="chevron-item">
                   <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareHealthcare')" title="Show/Hide Software Development in Healthtech">
                     <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Healthtech Software Development">
                     <span class="sub-bold">Agile Software Development in Healthtech</span>
                   </button>
-                    <div class="inline-section" id="softwareHealthcare">
-                      <p>At a scalable healthtech organization, I supported enterprise-wide Agile transformation efforts by coaching delivery teams, departments, and leaders. I regularly facilitated critical conversations, led retrospectives and PI planning events, conducted Agile trainings, and provided one-on-one mentoring—all with a focus on continuous improvement, alignment, and value delivery.</p>
-                      <p>This role deepened my experience with Agile Release Trains (ARTs), Release Train Engineers (RTEs), and Lean Portfolio Management. I saw how frameworks like SAFe can bring clarity and flow to large-scale healthcare systems—where outcomes must be timely, secure, and trustworthy. Agile enabled our teams to make faster decisions, reduce handoffs, and collaborate more effectively across functions, helping the organization achieve meaningful outcomes at scale.</p>
-                    </div>
+                  <div class="inline-section" id="softwareHealthcare">
+                    <p>At a scalable healthtech organization, I supported enterprise-wide Agile transformation efforts by coaching delivery teams, departments, and leaders. I regularly facilitated critical conversations, led retrospectives and PI planning events, conducted Agile trainings, and provided one-on-one mentoring—all with a focus on continuous improvement, alignment, and value delivery.</p>
+                    <p>This role deepened my experience with Agile Release Trains (ARTs), Release Train Engineers (RTEs), and Lean Portfolio Management. I saw how frameworks like SAFe can bring clarity and flow to large-scale healthcare systems—where outcomes must be timely, secure, and trustworthy. Agile enabled our teams to make faster decisions, reduce handoffs, and collaborate more effectively across functions, helping the organization achieve meaningful outcomes at scale.</p>
+                  </div>
                 </div>
+            </div>
             </div>
           </div> <!-- content-sections closing -->
 
@@ -660,7 +741,7 @@
             <form id="contact-form">
               <div class="form-row">
                 <input type="text" name="name" placeholder="Your Name" autocomplete="name" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number (optiuonal)" autocomplete="tel">
               </div>
               <div class="form-row">
                 <input type="email" name="email" placeholder="Your Email" autocomplete="email" required>
@@ -670,7 +751,7 @@
                 <textarea name="message" placeholder="Your Message" rows="5" autocomplete="off"></textarea>
               </div>
               <div class="form-row full-width">
-                <button type="submit" class="send-sms-button">Send SMS <span class="arrow-icon">→</span></button>
+                <button type="submit" class="send-sms-button">Send Message <span class="arrow-icon">→</span></button>
               </div>
             </form>
             <div id="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
@@ -697,34 +778,41 @@
 
     // Toggle svg icons
     function toggleSection(id, button) {
-  const section = document.getElementById(id);
-  const isVisible = section.style.display === 'block';
+      const thisSection = document.getElementById(id);
+      const isActive = thisSection.style.display === 'block';
 
-  // Toggle section visibility
-  section.style.display = isVisible ? 'none' : 'block';
+      // Close all sections and deactivate all buttons
+      const allSections = document.querySelectorAll('.container');
+      const allButtons = document.querySelectorAll('.icon-row .toggle');
+      allSections.forEach(section => section.style.display = 'none');
+      allButtons.forEach(btn => btn.classList.remove('active'));
 
-  // Toggle the .active class on the button
-  button.classList.toggle('active', !isVisible);
-}
+      if (!isActive) {
+        // Only open if it was closed
+        thisSection.style.display = 'block';
+        button.classList.add('active');
+      }
+    }
 
 
     // Toggle Chevrons
     function toggleInlineSection(button, sectionId) {
       const content = document.getElementById(sectionId);
-      const chevron = button.querySelector('.chevron-icon');
+      const isActive = content.classList.contains('active');
+      const chevronIcon = button.querySelector('.chevron-icon');
 
-      // Toggle visibility
-      const isNowActive = content.classList.toggle('active');
+      // Close all sections and chevrons first
+      document.querySelectorAll('.inline-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.chevron-toggle .chevron-icon').forEach(icon => icon.classList.remove('rotate'));
 
-      // Apply rotation to the correct chevron
-      if (chevron) {
-        if (isNowActive) {
-          chevron.classList.add('rotate');
-        } else {
-          chevron.classList.remove('rotate');
-        }
+      if (!isActive) {
+        // Open this one
+        content.classList.add('active');
+        if (chevronIcon) chevronIcon.classList.add('rotate');
       }
     }
+
+
 
      // Toggle Let's Connect button
     function toggleForm() {
