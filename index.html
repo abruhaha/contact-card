@@ -340,8 +340,11 @@
     }
 
     /* White icon and text in light mode */
-    html[data-theme='light'] .connect-button {
+    html[data-theme='light'] .connect-button,
+    html[data-theme='light'] .connect-button span,
+    html[data-theme='light'] .connect-button .cta-text {
       color: #f0f0f0;
+      -webkit-text-fill-color: #f0f0f0;
     }
 
     html[data-theme='light'] .connect-button img {
@@ -356,9 +359,15 @@
       outline: none;
       box-shadow: 0 0 0 2px #1c2645, 0 0 8px 2px rgba(152, 131, 80, 0.7); /* optional glow */
     }
-
     html[data-theme='dark'] .connect-button {
       box-shadow: 0 4px 12px rgba(102, 102, 102, 0.6); /* #666666 = rgb(102,102,102) */
+    }
+    
+    html[data-theme='dark'] .connect-button,
+    html[data-theme='dark'] .connect-button span,
+    html[data-theme='dark'] .connect-button .cta-text  {
+      color: #121212;
+      -webkit-text-fill-color: #121212;
     }
 
     .button-group {
