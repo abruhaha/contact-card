@@ -677,23 +677,28 @@
     <!-- Buttons -->
     <!-- Career Objectives button-->
      <div class="icon-row">
-        <button class="toggle" onclick="toggleSection('careerObjectives', this)" title="Show/Hide Career Objectives">
+        <button class="toggle" onclick="toggleSection('careerObjectives', this); 
+          gtag('event', 'click', { event_category: 'engagement', event_label: 'Career Objective Toggle'})" title="Show/Hide Career Objectives">
           <img id="objectives-icon" src="icons/bullseye-solid-arrow.svg" alt="Toggle Career Objectives">
         </button>
         <!-- Values button-->
-        <button class="toggle" onclick="toggleSection('values', this)" title="Show/Hide Values">
+        <button class="toggle" onclick="toggleSection('values', this); 
+          gtag('event', 'click', { event_category: 'engagement', event_label: 'Values Toggle'})" title="Show/Hide Values">
           <img id="values-icon" src="icons/compass-north.svg" alt="Toggle Values">
         </button>
         <!-- Proven Impact button -->
-        <button class="toggle" onclick="toggleSection('provenImpact', this)" title="Show/Hide Proven Impact">
+        <button class="toggle" onclick="toggleSection('provenImpact', this); 
+          gtag('event', 'click', { event_category: 'engagement', event_label: 'Proven Impact Toggle'})" title="Show/Hide Proven Impact">
           <img id="proven-impact-icon" src="icons/chart-rounded.svg" alt="Toggle Proven Impact">
         </button>
         <!-- Leadership Style button -->
-        <button class="toggle" onclick="toggleSection('leadershipStyle', this)" title="Show/Hide Leadership Style">
+        <button class="toggle" onclick="toggleSection('leadershipStyle', this); 
+          gtag('event', 'click', { event_category: 'engagement', event_label: 'Leadership Style Toggle'})" title="Show/Hide Leadership Style">
           <img id="leadership-style-icon" src="icons/brain.svg" alt="Toggle Leadership Style">
         </button>
         <!-- Agile Experiance button -->
-        <button class="toggle" onclick="toggleSection('agileExperiance', this)" title="Show/Hide Agile Experiance">
+        <button class="toggle" onclick="toggleSection('agileExperiance', this); 
+          gtag('event', 'click', { event_category: 'engagement', event_label: 'Agile Experiance Toggle'})" title="Show/Hide Agile Experiance">
           <img id="agile-experiance-icon" src="icons/toolbox.svg" alt="Toggle Agile Experiance">
         </button>
       </div>
@@ -752,7 +757,9 @@
               <div class="chevron-list">
 
                 <div class="chevron-item"> 
-                    <button class="chevron-toggle" onclick="toggleInlineSection(this, 'nonSoftware')" title="Show/Hide Agile in non-Software Environments">
+                    <button class="chevron-toggle" onclick="toggleInlineSection(this, 'nonSoftware'); 
+                      gtag('event', 'click', { event_category: 'engagement', event_label: 'Agile in non-Software Environments'})"
+                      title="Show/Hide Agile in non-Software Environments">
                       <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Non-Software">
                       <span class="sub-bold">Agile in Non-Software Environments</span>
                     </button>
@@ -764,7 +771,9 @@
                 </div>
 
                 <div class="chevron-item">
-                  <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareMarketing')" title="Show/Hide Agile in Software Development Marketing">
+                  <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareMarketing'); 
+                    gtag('event', 'click', { event_category: 'engagement', event_label: 'Agile Software Dev in Marketing Toggle'})"
+                      title="Show/Hide Agile in Software Development Marketing">
                     <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Marketing Software Development">
                     <span class="sub-bold">Agile Software Development in Marketing</span>
                   </button>
@@ -775,7 +784,9 @@
                 </div>
 
                 <div class="chevron-item">
-                  <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareHealthcare')" title="Show/Hide Software Development in Healthtech">
+                  <button class="chevron-toggle" onclick="toggleInlineSection(this, 'softwareHealthcare'); 
+                      gtag('event', 'click', { event_category: 'engagement', event_label: 'Agile Software Dev in Healthtech'})"
+                      title="Show/Hide Software Development in Healthtech">
                     <img class="chevron-icon" src="icons/chevron-down-solid.svg" alt="Toggle Healthtech Software Development">
                     <span class="sub-bold">Agile Software Development in Healthtech</span>
                   </button>
@@ -789,7 +800,8 @@
           </div> <!-- content-sections closing -->
 
           <!-- CTA Button -->
-          <button id="cta-button"  class="connect-button" onclick="toggleForm()">
+          <button id="cta-button"  class="connect-button" onclick="toggleForm(); 
+            gtag('event', 'click', { event_category: 'engagement', event_label: 'Lets Connect Button'})">
             <img src="icons/comment-solid.svg" alt="Comments Icon" class="connect-icon" />
             <span class="cta-text">Let’s Connect</span>
           </button>
